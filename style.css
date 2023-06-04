@@ -25,11 +25,74 @@ body{
 }
 
 .header-container{
-    height: 75px;
     width: 100%;
-    background-color: red;
+    background-color: var(--primary-color);
+    display: flex;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.header-left, .header-right{
+    padding: 13px;
+}
+
+.header-left{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex: 1;
+}
+
+.header-right{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    flex: 5;
+    gap: 20px;
 }
 
 .display-font{
     font-family: 'Bowlby One SC', cursive;
+}
+
+.profile-pic{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--secondary-color);
+    background-image: url(img/profile-image.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+#searchBar{
+    appearance: none;
+    border: none;
+    padding: 7px;
+    outline: none;
+    border-radius: 7px;
+    width: 400px;
+    min-width: 200px;
+}
+
+.btn-search{
+    appearance: none;
+    border: none;
+    outline: none;
+    padding: 7px 27px 7px 27px;
+    border-radius: 7px;
+    cursor: pointer;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+.btn-search:hover{
+  
+}
+
+.library-logo{
+    font-size: 33rem;
+    font-family: 'Bowlby One SC', cursive;
+    color: var(--white-color);
 }
