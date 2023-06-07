@@ -175,14 +175,27 @@ a:hover{
     margin-bottom: 120px;
 }
 
+.grid-container-list{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    margin-bottom: 120px;
+}
+
 .grid-item{
     background-color: white;
-    width: 1fr;
     height: 200px;
     border-radius: 20px;
     padding: 22px;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.7);
+}
+
+.grid-item-list{
+    background-color: white;
+    padding: 22px;
+    display: flex;
     justify-content: space-between;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.7);
 }
@@ -196,8 +209,19 @@ a:hover{
     font-weight: bold;
 }
 
+.book-title-list{
+    font-size: 18rem;
+    font-weight: bold;
+    flex: 1;
+}
+
 .author{
     font-size: 18rem;
+}
+
+.author-list{
+    font-size: 18rem;
+    flex: 1;
 }
 
 .card-buttons{
@@ -206,7 +230,20 @@ a:hover{
     gap: 10px;
 }
 
+.card-buttons-list{
+    width: 300px;
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+}
+
+.card-text-list{
+    display: flex;
+    width: 100%;
+}
+
 .remove-btn{
+    flex: 1;
     padding: 10px;
     appearance: none;
     outline: none;
@@ -223,6 +260,7 @@ a:hover{
 }
 
 .read-btn{
+    flex: 1;
     padding: 10px;
     appearance: none;
     outline: none;
@@ -323,6 +361,11 @@ a:hover{
     top: 70%;
 }
 
+.btn-read{
+    background-color: rgb(49, 182, 49);
+    color: white;
+}
+
 /*Media queries*/
 
 @media screen and (max-width: 768px){
@@ -370,6 +413,9 @@ a:hover{
     .github{
         margin-top: 65px;
     }
+    #btnListLayout{
+        display: none;
+    }
 }
 
 @media screen and (min-width:768px) and (max-width: 1369px) {
@@ -378,6 +424,9 @@ a:hover{
     }
     #searchBar{
         width: 360px;
+    }
+    #btnListLayout{
+        display: none;
     }
 }
 
