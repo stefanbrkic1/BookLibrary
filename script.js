@@ -9,6 +9,20 @@ const bookTitle= document.querySelectorAll('.book-title')
 const pagesNumber= document.querySelectorAll('.pages-number')
 const cardButtons= document.querySelectorAll('.card-buttons')
 
+
+let myLibrary = [];
+
+function Book(title, author, pages, status) {
+  this.title = title;
+  this.author = author;
+  this.pages = pages;
+  this.status = status;
+}
+
+function addBookToLibrary() {
+  // do stuff here
+}
+
 readBtn.forEach(button => {
     button.addEventListener('click', () =>{
         if(button.classList.contains('btn-read')){
