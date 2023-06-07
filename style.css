@@ -90,14 +90,13 @@ body{
     padding: 5px 27px 5px 27px;
     border-radius: 7px;
     cursor: pointer;
-    background-color: transparent;
+    background-color: var(--primary-color);
     color: var(--text-color);
     font-weight: bold;
 }
 
 .btn-search:hover{
-  background-color: var(--white-color);
-  color: var(--primary-color);
+  background-color: var(--danger-color);
 }
 
 .library-logo{
@@ -157,6 +156,7 @@ body{
 .text-container{
     text-align: center;
     line-height: 85rem;
+    position: relative;
 }
 
 a{
@@ -319,6 +319,8 @@ a:hover{
 .github{
     display: flex;
     align-items: center;
+    position: absolute;
+    top: 70%;
 }
 
 /*Media queries*/
