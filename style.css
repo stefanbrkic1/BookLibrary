@@ -24,7 +24,8 @@ body{
     --secondary-color: #242037;
     --text-color: #f6f5fa;
     --accent-color: #f15f62;
-    --danger-color: #d94665;
+    --danger-color: #e2333b;
+    --dark-danger-color: #c5242c;
     --white-color: #f9fefe;
 }
 
@@ -40,7 +41,7 @@ body{
 }
 
 .header-left, .header-right{
-    padding: 15px 25px 15px 25px;
+    padding: 10px 25px 10px 25px;
 }
 
 .header-left{
@@ -103,12 +104,14 @@ body{
     font-size: 33rem;
     font-family: 'Bowlby One SC', cursive;
     color: var(--white-color);
+    cursor: pointer;
 }
 
 .container{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 #firstSection{
@@ -156,17 +159,6 @@ body{
     line-height: 85rem;
 }
 
-footer{
-    background-color: transparent;
-    padding: 10px;
-    text-align: center;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    color: var(--white-color);
-}
-
 a{
     text-decoration: none;
     color: white;
@@ -174,6 +166,159 @@ a{
 
 a:hover{
     color: rgb(218, 218, 218);
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-bottom: 120px;
+}
+
+.grid-item{
+    background-color: white;
+    width: 1fr;
+    height: 200px;
+    border-radius: 20px;
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.7);
+}
+
+.container-main{
+    padding: 40px;
+}
+
+.book-title{
+    font-size: 24rem;
+    font-weight: bold;
+}
+
+.author{
+    font-size: 18rem;
+}
+
+.card-buttons{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.remove-btn{
+    padding: 10px;
+    appearance: none;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--danger-color);
+    color: var(--text-color);
+    cursor: pointer;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+}
+
+.remove-btn:hover{
+    background-color: var(--dark-danger-color);
+}
+
+.read-btn{
+    padding: 10px;
+    appearance: none;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #e2e2e2;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+}
+
+.btn-add{
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    appearance: none;
+    border: none;
+    outline: none;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    font-size: 55rem;
+    box-shadow: 0px 0px 8px rgb(15, 15, 15);
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    margin: 40px 60px 40px 60px;
+    cursor: pointer;
+    transition: ease-in-out, 200ms;
+}
+
+.btn-add:hover{
+    background-color: var(--danger-color);
+    transform: rotate(90deg);
+}
+
+.main-header{
+    color: var(--white-color);
+    font-weight: bold;
+    font-family: 'Bowlby One SC', cursive;
+    font-size: 35rem;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+}
+
+.main-header-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.btn-card-layout, .btn-list-layout{
+    width:50px;
+    height: 43px;
+    appearance: none;
+    border: none;
+    cursor: pointer;
+    background-color: var(--white-color);
+    border-radius: 5px;
+    box-shadow: 0px 0px 8px rgb(15, 15, 15);    
+    background-color: var(--primary-color);
+}
+
+.btn-card-layout:hover{
+    background-color: var(--danger-color);
+}
+
+.btn-list-layout:hover{
+    background-color: var(--danger-color);
+}
+
+.white-border{
+    border: 3px solid white;
+}
+
+.grid-layout-buttons{
+    display: flex;
+    gap: 12px;
+}
+
+.logo{
+    width: 45px;
+}
+
+.github-link{
+    color: white;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+    font-size: 25rem;
+}
+
+.github-logo{
+    width: 44px;
+    margin: 7px;
+}
+
+.github{
+    display: flex;
+    align-items: center;
 }
 
 /*Media queries*/
@@ -200,8 +345,37 @@ a:hover{
     .header-left{
         padding: 10px 20px 10px 20px;
     }
+    .grid-container{
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+        margin-bottom: 100px;
+    }
+    .container-main{
+        padding: 20px;
+    }
+    .main-header{
+        font-size: 30rem;
+    }
+    .btn-add{
+        width: 70px;
+        height: 70px;
+        font-size: 43rem;
+        margin: 20px 30px 20px 30px;
+    }
+    footer{
+        display: none;
+    }
+    .github{
+        margin-top: 65px;
+    }
 }
 
-@media screen and(min-width: 769px) and (max-width: 1024px){
-
+@media screen and (min-width:768px) and (max-width: 1369px) {
+    .grid-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    #searchBar{
+        width: 360px;
+    }
 }
+
