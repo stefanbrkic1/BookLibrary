@@ -203,6 +203,7 @@ a:hover {
 
 .container-main {
     padding: 40px;
+
 }
 
 .book-title {
@@ -241,6 +242,7 @@ a:hover {
 .card-text-list {
     display: flex;
     width: 100%;
+    align-items: center;
 }
 
 .remove-btn {
@@ -560,6 +562,10 @@ label {
     }
 
     #btnListLayout {
+        display: none;
+    }
+
+    .search-bar {
         display: none;
     }
 }

@@ -27,7 +27,6 @@ function addBookToLibrary() {
     // do stuff here
 }
 
-
 modalBtn.addEventListener('click', () => {
     openModal(modal)
 })
