@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,140 +11,168 @@
     <title>Books</title>
     <link rel="Website Icon" href="img/book.png" type="png">
 </head>
+
 <body>
     <div class="">
-            <!--#region header-->
-    <header class="header-container">
-        <div class="header-left">
+        <!--#region header-->
+        <header class="header-container">
+            <div class="header-left">
                 <img src="img/logo.png" alt="book" class="logo">
-            <a href="index.html">
-                <div class="library-logo">
-                    Library
+                <a href="index.html">
+                    <div class="library-logo">
+                        Library
+                    </div>
+                </a>
+            </div>
+            <div class="header-right">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search for a book..." id="searchBar">
+                    <button type="button" class="btn-search">
+                        Search
+                    </button>
                 </div>
-            </a>
-        </div>
-        <div class="header-right">
-            <div class="search-bar">
-                <input type="text" placeholder="Search for a book..." id="searchBar" >
-                <button type="button" class="btn-search">
-                    Search
-                </button>
-            </div>
-            <div class="profile-pic">
-     
-            </div>
-        </div>
-    </header>
-    <!--#endregion-->
+                <div class="profile-pic">
 
-    <!--#region main-->
-    <div class="container-main">
-        <div class="main-header-container">
-            <div class="main-header">Your Books</div>
-            <div class="grid-layout-buttons">
-                <button type="button" id="btnCardLayout" class="btn-card-layout white-border">
-                    <i class="fa-solid fa-box" style="color: #ffffff;"></i>
-                </button>
-                <button type="button" id="btnListLayout" class="btn-list-layout">
-                    <i class="fa-solid fa-list" style="color: #ffffff;"></i>
-                </button>
-            </div>
-        </div>
-           <div id="gridContainer" class="grid-container">
-            <div class="grid-card grid-item">
-                <div class="card-text">
-                    <div class="book-title">Atomic Habbits</div>
-                    <div class="author">By James Clear</div>
-                    <div class="pages-number">Pages: 245</div>
-                </div>
-                <div class="card-buttons-container card-buttons">
-                    <button type="button" class="read-btn btn-read">Read</button>
-                    <button type="button" class="remove-btn">Remove</button>
                 </div>
             </div>
-            <div class="grid-card grid-item">
-                <div class="card-text">
-                    <div class="book-title">The 48 Laws Of Power</div>
-                    <div class="author">By Robert Greene</div>
-                    <div class="pages-number">Pages: 221</div>
-                </div>
-                <div class="card-buttons-container card-buttons">
-                    <button type="button" class="read-btn btn-read">Read</button>
-                    <button type="button" class="remove-btn">Remove</button>
-                </div>
-            </div>
-            <div class="grid-card grid-item">
-                <div class="card-text">
-                    <div class="book-title">Meditations</div>
-                    <div class="author">By Marcus Aurelius</div>
-                    <div class="pages-number">Pages: 189</div>
-                </div>
-                <div class="card-buttons-container card-buttons">
-                    <button type="button" class="read-btn btn-read">Read</button>
-                    <button type="button" class="remove-btn">Remove</button>
-                </div>
-            </div>
-            <div class="grid-card grid-item">
-                <div class="card-text">
-                    <div class="book-title">The Idiot</div>
-                    <div class="author">By Fyodor Dostoyevski</div>
-                    <div class="pages-number">Pages: 357</div>
-                </div>
-                <div class="card-buttons-container card-buttons">
-                    <button type="button" class="read-btn btn-read">Read</button>
-                    <button type="button" class="remove-btn">Remove</button>
-                </div>
-            </div>
-            <div class="grid-card grid-item">
-                <div class="card-text">
-                    <div class="book-title">The Idiot</div>
-                    <div class="author">By Fyodor Dostoyevski</div>
-                    <div class="pages-number">Pages: 357</div>
-                </div>
-                <div class="card-buttons-container card-buttons">
-                    <button type="button" class="read-btn">Unread</button>
-                    <button type="button" class="remove-btn">Remove</button>
-                </div>
-            </div>
-            <div class="grid-card grid-item">
-                <div class="card-text">
-                    <div class="book-title">The Idiot</div>
-                    <div class="author">By Fyodor Dostoyevski</div>
-                    <div class="pages-number">Pages: 357</div>
-                </div>
-                <div class="card-buttons-container card-buttons">
-                    <button type="button" class="read-btn">Unread</button>
-                    <button type="button" class="remove-btn">Remove</button>
-                </div>
-            </div>
-            <div class="grid-card grid-item">
-                <div class="card-text">
-                    <div class="book-title">The Idiot</div>
-                    <div class="author">By Fyodor Dostoyevski</div>
-                    <div class="pages-number">Pages: 357</div>
-                </div>
-                <div class="card-buttons-container card-buttons">
-                    <button type="button" class="read-btn">Unread</button>
-                    <button type="button" class="remove-btn">Remove</button>
-                </div>
-            </div>
-            <div class="grid-card grid-item">
-                <div class="card-text">
-                    <div class="book-title">The Idiot</div>
-                    <div class="author">By Fyodor Dostoyevski</div>
-                    <div class="pages-number">Pages: 357</div>
-                </div>
-                <div class="card-buttons-container card-buttons">
-                    <button type="button" class="read-btn">Unread</button>
-                    <button type="button" class="remove-btn">Remove</button>
-                </div>
-            </div>
-            
-           </div>
+        </header>
+        <!--#endregion-->
 
-           <button type="button" class="btn-add">+</div>
+        <!--#region main-->
+        <div class="container-main">
+            <div class="main-header-container">
+                <div class="main-header">Your Books</div>
+                <div class="grid-layout-buttons">
+                    <button type="button" id="btnCardLayout" class="btn-card-layout white-border">
+                        <i class="fa-solid fa-box" style="color: #ffffff;"></i>
+                    </button>
+                    <button type="button" id="btnListLayout" class="btn-list-layout">
+                        <i class="fa-solid fa-list" style="color: #ffffff;"></i>
+                    </button>
+                </div>
+            </div>
+            <div id="gridContainer" class="grid-container">
+                <div class="grid-card grid-item">
+                    <div class="card-text">
+                        <div class="book-title">Atomic Habbits</div>
+                        <div class="author">By James Clear</div>
+                        <div class="pages-number">Pages: 245</div>
+                    </div>
+                    <div class="card-buttons-container card-buttons">
+                        <button type="button" class="read-btn btn-read">Read</button>
+                        <button type="button" class="remove-btn">Remove</button>
+                    </div>
+                </div>
+                <div class="grid-card grid-item">
+                    <div class="card-text">
+                        <div class="book-title">The 48 Laws Of Power</div>
+                        <div class="author">By Robert Greene</div>
+                        <div class="pages-number">Pages: 221</div>
+                    </div>
+                    <div class="card-buttons-container card-buttons">
+                        <button type="button" class="read-btn btn-read">Read</button>
+                        <button type="button" class="remove-btn">Remove</button>
+                    </div>
+                </div>
+                <div class="grid-card grid-item">
+                    <div class="card-text">
+                        <div class="book-title">Meditations</div>
+                        <div class="author">By Marcus Aurelius</div>
+                        <div class="pages-number">Pages: 189</div>
+                    </div>
+                    <div class="card-buttons-container card-buttons">
+                        <button type="button" class="read-btn btn-read">Read</button>
+                        <button type="button" class="remove-btn">Remove</button>
+                    </div>
+                </div>
+                <div class="grid-card grid-item">
+                    <div class="card-text">
+                        <div class="book-title">The Idiot</div>
+                        <div class="author">By Fyodor Dostoyevski</div>
+                        <div class="pages-number">Pages: 357</div>
+                    </div>
+                    <div class="card-buttons-container card-buttons">
+                        <button type="button" class="read-btn btn-read">Read</button>
+                        <button type="button" class="remove-btn">Remove</button>
+                    </div>
+                </div>
+                <div class="grid-card grid-item">
+                    <div class="card-text">
+                        <div class="book-title">The Idiot</div>
+                        <div class="author">By Fyodor Dostoyevski</div>
+                        <div class="pages-number">Pages: 357</div>
+                    </div>
+                    <div class="card-buttons-container card-buttons">
+                        <button type="button" class="read-btn">Unread</button>
+                        <button type="button" class="remove-btn">Remove</button>
+                    </div>
+                </div>
+                <div class="grid-card grid-item">
+                    <div class="card-text">
+                        <div class="book-title">The Idiot</div>
+                        <div class="author">By Fyodor Dostoyevski</div>
+                        <div class="pages-number">Pages: 357</div>
+                    </div>
+                    <div class="card-buttons-container card-buttons">
+                        <button type="button" class="read-btn">Unread</button>
+                        <button type="button" class="remove-btn">Remove</button>
+                    </div>
+                </div>
+                <div class="grid-card grid-item">
+                    <div class="card-text">
+                        <div class="book-title">The Idiot</div>
+                        <div class="author">By Fyodor Dostoyevski</div>
+                        <div class="pages-number">Pages: 357</div>
+                    </div>
+                    <div class="card-buttons-container card-buttons">
+                        <button type="button" class="read-btn">Unread</button>
+                        <button type="button" class="remove-btn">Remove</button>
+                    </div>
+                </div>
+                <div class="grid-card grid-item">
+                    <div class="card-text">
+                        <div class="book-title">The Idiot</div>
+                        <div class="author">By Fyodor Dostoyevski</div>
+                        <div class="pages-number">Pages: 357</div>
+                    </div>
+                    <div class="card-buttons-container card-buttons">
+                        <button type="button" class="read-btn">Unread</button>
+                        <button type="button" class="remove-btn">Remove</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="modal" id="modal">
+                <div class="modal-header">
+                    <div class="modal-title">Add a book</div>
+                    <button data-close-button id="closeBtn" class="close-btn">&times;</button>
+                </div>
+                <form method="get" id="form">
+                    <label for="titleInput">Title</label>
+                    <input type="text" id="titleInput" name="title" class="input" placeholder="Title of the book...">
+                    <label for="authorInput">Author</label>
+                    <input type="text" id="authorInput" name="author" class="input" placeholder="Author of the book...">
+                    <label for="pagesInput">Pages</label>
+                    <input type="number" id="pagesInput" name="pages" class="input" placeholder="Number of pages...">
+                    <label>Reading Status</label>
+                    <div class="radio-input-container">
+                        <label for="radioRead" class="radio-label">Read
+                            <input type="radio" name="readingStatus" id="radioRead">
+                        </label>
+                        <label for="radioRead" class="radio-label">Unread
+                            <input type="radio" name="readingStatus" id="radioUnread">
+                        </label>
+                    </div>
+                    <button type="submit" class="btn-submit">Add a book</button>
+                </form>
+            </div>
+            <button type="button" data-modal-target="#modal" id="modalBtn" class="btn-add">+
+        </div>
+        <div id="overlay"></div>
     </div>
     <!--#endregion-->
     </div>
 </body>
+
 </html>

@@ -1,25 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
 }
 
-html{
+html {
     font-size: 6.25%;
 }
 
-body{
+body {
     font-size: 16rem;
-    background-color: #242037; 
+    background-color: #242037;
     background-image: url(img/books.jpg);
     background-repeat: no-repeat;
-    background-size: cover; 
+    background-size: cover;
 }
 
-:root{
+:root {
     --primary-color: #ef444c;
     --secondary-color: #242037;
     --text-color: #f6f5fa;
@@ -29,29 +29,30 @@ body{
     --white-color: #f9fefe;
 }
 
-.container1{
+.container1 {
     width: 100vw;
     height: 100vh;
 }
 
-.header-container{
+.header-container {
     background-color: var(--primary-color);
     display: flex;
     grid-template-columns: repeat(2, 1fr);
 }
 
-.header-left, .header-right{
+.header-left,
+.header-right {
     padding: 10px 25px 10px 25px;
 }
 
-.header-left{
+.header-left {
     display: flex;
     gap: 10px;
     align-items: center;
     flex: 1;
 }
 
-.header-right{
+.header-right {
     display: flex;
     align-items: center;
     justify-content: end;
@@ -59,11 +60,11 @@ body{
     gap: 20px;
 }
 
-.display-font{
+.display-font {
     font-family: 'Bowlby One SC', cursive;
 }
 
-.profile-pic{
+.profile-pic {
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -74,7 +75,7 @@ body{
     cursor: pointer;
 }
 
-#searchBar{
+#searchBar {
     appearance: none;
     border: none;
     padding: 7px;
@@ -83,7 +84,7 @@ body{
     width: 400px;
 }
 
-.btn-search{
+.btn-search {
     appearance: none;
     border: 3px solid var(--white-color);
     outline: none;
@@ -95,25 +96,25 @@ body{
     font-weight: bold;
 }
 
-.btn-search:hover{
-  background-color: var(--danger-color);
+.btn-search:hover {
+    background-color: var(--danger-color);
 }
 
-.library-logo{
+.library-logo {
     font-size: 33rem;
     font-family: 'Bowlby One SC', cursive;
     color: var(--white-color);
     cursor: pointer;
 }
 
-.container{
+.container {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
-#firstSection{
+#firstSection {
     display: flex;
     padding: 70px;
     margin-top: 100px;
@@ -121,20 +122,20 @@ body{
     border-radius: 20px;
 }
 
-.display-text{
+.display-text {
     color: var(--white-color);
     font-family: 'Bowlby One SC', cursive;
     font-size: 80rem;
     text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
 }
 
-.display-text-span{
+.display-text-span {
     color: var(--primary-color);
     font-family: 'Bowlby One SC', cursive;
     font-size: 80rem;
 }
 
-.btn-main{
+.btn-main {
     padding: 12px 50px 12px 50px;
     cursor: pointer;
     background-color: var(--primary-color);
@@ -148,40 +149,40 @@ body{
     box-shadow: 0px 3px 6px rgba(11, 11, 11);
 }
 
-.btn-main:hover{
+.btn-main:hover {
     transform: scale(1.05);
     border: 4px solid white;
 }
 
-.text-container{
+.text-container {
     text-align: center;
     line-height: 85rem;
     position: relative;
 }
 
-a{
+a {
     text-decoration: none;
     color: white;
 }
 
-a:hover{
+a:hover {
     color: rgb(218, 218, 218);
 }
 
-.grid-container{
+.grid-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 30px;
     margin-bottom: 120px;
 }
 
-.grid-container-list{
+.grid-container-list {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     margin-bottom: 120px;
 }
 
-.grid-item{
+.grid-item {
     background-color: white;
     height: 200px;
     border-radius: 20px;
@@ -192,7 +193,7 @@ a:hover{
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.7);
 }
 
-.grid-item-list{
+.grid-item-list {
     background-color: white;
     padding: 22px;
     display: flex;
@@ -200,49 +201,49 @@ a:hover{
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.7);
 }
 
-.container-main{
+.container-main {
     padding: 40px;
 }
 
-.book-title{
+.book-title {
     font-size: 24rem;
     font-weight: bold;
 }
 
-.book-title-list{
+.book-title-list {
     font-size: 18rem;
     font-weight: bold;
     flex: 1;
 }
 
-.author{
+.author {
     font-size: 18rem;
 }
 
-.author-list{
+.author-list {
     font-size: 18rem;
     flex: 1;
 }
 
-.card-buttons{
+.card-buttons {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-.card-buttons-list{
+.card-buttons-list {
     width: 300px;
     display: flex;
     gap: 10px;
     flex-direction: row;
 }
 
-.card-text-list{
+.card-text-list {
     display: flex;
     width: 100%;
 }
 
-.remove-btn{
+.remove-btn {
     flex: 1;
     padding: 10px;
     appearance: none;
@@ -255,11 +256,11 @@ a:hover{
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
 }
 
-.remove-btn:hover{
+.remove-btn:hover {
     background-color: var(--dark-danger-color);
 }
 
-.read-btn{
+.read-btn {
     flex: 1;
     padding: 10px;
     appearance: none;
@@ -271,7 +272,7 @@ a:hover{
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
 }
 
-.btn-add{
+.btn-add {
     width: 85px;
     height: 85px;
     border-radius: 50%;
@@ -290,12 +291,12 @@ a:hover{
     transition: ease-in-out, 200ms;
 }
 
-.btn-add:hover{
+.btn-add:hover {
     background-color: var(--danger-color);
     transform: rotate(90deg);
 }
 
-.main-header{
+.main-header {
     color: var(--white-color);
     font-weight: bold;
     font-family: 'Bowlby One SC', cursive;
@@ -303,130 +304,262 @@ a:hover{
     text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
 }
 
-.main-header-container{
+.main-header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
 }
 
-.btn-card-layout, .btn-list-layout{
-    width:50px;
+.btn-card-layout,
+.btn-list-layout {
+    width: 50px;
     height: 43px;
     appearance: none;
     border: none;
     cursor: pointer;
     background-color: var(--white-color);
     border-radius: 5px;
-    box-shadow: 0px 0px 8px rgb(15, 15, 15);    
+    box-shadow: 0px 0px 8px rgb(15, 15, 15);
     background-color: var(--primary-color);
 }
 
-.btn-card-layout:hover{
+.btn-card-layout:hover {
     background-color: var(--danger-color);
 }
 
-.btn-list-layout:hover{
+.btn-list-layout:hover {
     background-color: var(--danger-color);
 }
 
-.white-border{
+.white-border {
     border: 3px solid white;
 }
 
-.grid-layout-buttons{
+.grid-layout-buttons {
     display: flex;
     gap: 12px;
 }
 
-.logo{
+.logo {
     width: 45px;
 }
 
-.github-link{
+.github-link {
     color: white;
     text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
     font-size: 25rem;
 }
 
-.github-logo{
+.github-logo {
     width: 44px;
     margin: 7px;
 }
 
-.github{
+.github {
     display: flex;
     align-items: center;
     position: absolute;
     top: 70%;
 }
 
-.btn-read{
+.btn-read {
     background-color: rgb(49, 182, 49);
     color: white;
 }
 
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    z-index: 10;
+    background-color: white;
+    width: 600px;
+    max-width: 80%;
+    box-sizing: border-box;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 6px rgb(11, 11, 11);
+    color: rgb(25, 25, 25);
+}
+
+.modal.active {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.input {
+    appearance: none;
+    border: none;
+    border-radius: 5px;
+    height: 40px;
+    box-sizing: border-box;
+    padding: 10px;
+    outline: var(--dark-danger-color);
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.3);
+}
+
+.modal-title {
+    font-size: 24rem;
+    font-weight: bold;
+}
+
+label {
+    font-size: 18rem;
+}
+
+.close-btn {
+    appearance: none;
+    border: none;
+    width: 40px;
+    color: rgb(25, 25, 25);
+    background-color: transparent;
+    font-size: 40rem;
+    cursor: pointer;
+}
+
+.btn-submit {
+    padding: 13px;
+    appearance: none;
+    border: none;
+    outline: none;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    font-size: 18rem;
+}
+
+.btn-submit:hover {
+    background-color: var(--danger-color);
+}
+
+#overlay {
+    position: fixed;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+    transition: 200ms ease-in-out;
+}
+
+#overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.radio-input-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.3);
+    height: 40px;
+    border-radius: 5px;
+}
+
+.radio-label{
+    font-size: 14rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
 /*Media queries*/
 
-@media screen and (max-width: 768px){
-    .search-bar{
+@media screen and (max-width: 768px) {
+    .search-bar {
         display: none;
     }
-    #firstSection{
+
+    #firstSection {
+        box-sizing: border-box;
         padding: 5px;
         width: 100%;
         margin-top: 70px;
     }
-    .display-text{
+
+    .display-text {
         font-size: 50rem;
     }
-    .display-text-span{
+
+    .display-text-span {
         font-size: 50rem;
     }
-    .text-container{
+
+    .text-container {
         text-align: center;
         line-height: 52rem;
     }
-    .header-left{
+
+    .header-left {
         padding: 10px 20px 10px 20px;
     }
-    .grid-container{
+
+    .grid-container {
         grid-template-columns: repeat(1, 1fr);
         gap: 20px;
         margin-bottom: 100px;
     }
-    .container-main{
+
+    .container-main {
         padding: 20px;
     }
-    .main-header{
+
+    .main-header {
         font-size: 30rem;
     }
-    .btn-add{
+
+    .btn-add {
         width: 70px;
         height: 70px;
         font-size: 43rem;
         margin: 20px 30px 20px 30px;
     }
-    footer{
+
+    footer {
         display: none;
     }
-    .github{
+
+    .github {
         margin-top: 65px;
     }
-    #btnListLayout{
+
+    #btnListLayout {
         display: none;
     }
 }
 
 @media screen and (min-width:768px) and (max-width: 1369px) {
-    .grid-container{
+    .grid-container {
         grid-template-columns: repeat(2, 1fr);
     }
-    #searchBar{
+
+    #searchBar {
         width: 360px;
     }
-    #btnListLayout{
+
+    #btnListLayout {
         display: none;
     }
 }
-
