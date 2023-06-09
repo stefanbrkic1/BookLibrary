@@ -1,20 +1,70 @@
-const readBtn = document.querySelectorAll('.read-btn')
 const btnCardLayout = document.getElementById('btnCardLayout')
 const btnListLayout = document.getElementById('btnListLayout')
 const gridContainer = document.getElementById('gridContainer')
-const gridItem = document.querySelectorAll('.grid-card')
-const cardText = document.querySelectorAll('.card-text')
-const authorText = document.querySelectorAll('.author')
-const bookTitle = document.querySelectorAll('.book-title')
-const pagesNumber = document.querySelectorAll('.pages-number')
-const cardButtons = document.querySelectorAll('.card-buttons')
 const modalBtn = document.getElementById('modalBtn')
 const closeModalBtn = document.getElementById('closeBtn')
 const overlay = document.getElementById('overlay')
 const modal = document.getElementById('modal')
+const addBtn = document.getElementById('addBtn')
+const form = document.getElementById('form')
+const readingStatus = document.getElementsByName('readingStatus')
+const radioReadInput = document.getElementById('radioRead')
+const radioUnreadInput = document.getElementById('radioUnread')
+
+window.onload = function(){
+    displayBooks();
+}
+
+document.getElementById('form').addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    let titleInput = document.getElementById('titleInput')
+    let authorInput = document.getElementById('authorInput')
+    let pagesInput = document.getElementById('pagesInput')
+
+    let selectedStatus;
+    for (i = 0; i < readingStatus.length; i++) {
+        if (readingStatus[i].checked) {
+            selectedStatus = readingStatus[i].value;
+            break;
+        }
+    }
+
+    let newBook = new Book(titleInput.value, authorInput.value, pagesInput.value, selectedStatus)
+
+    myLibrary.push(newBook);
+
+    closeModal(modal)
+    displayBooks();
+})
 
 
-let myLibrary = [];
+let myLibrary = [
+    {
+        title: 'Atomic Habbits',
+        author: 'James Clear',
+        pages: '245',
+        status: 'Read'
+    },
+    {
+        title: 'The 48 Laws of Power',
+        author: 'Robert Greene',
+        pages: '221',
+        status: 'Read'
+    },
+    {
+        title: 'Meditations',
+        author: 'Marcus Aurelius',
+        pages: '180',
+        status: 'Read'
+    },
+    {
+        title: 'The Idiot',
+        author: 'Fyodor Dostoyevski',
+        pages: '357',
+        status: 'Read'
+    },
+];
 
 function Book(title, author, pages, status) {
     this.title = title;
@@ -23,8 +73,48 @@ function Book(title, author, pages, status) {
     this.status = status;
 }
 
-function addBookToLibrary() {
-    // do stuff here
+function displayBooks(){
+    gridContainer.innerHTML= '';
+    if(btnCardLayout.classList.contains('white-border')){
+        myLibrary.forEach(book => {
+            const div = document.createElement('div');
+            div.className = 'grid-card grid-item';
+            div.innerHTML =    `<div class="card-text card-text-script">
+                <div class="book-title-script book-title">${book.title}</div>
+                <div class="author-script author">By ${book.author}</div>
+                <div class="pages-number">Pages: ${book.pages}</div>
+            </div>
+            <div class="card-buttons-script card-buttons-container card-buttons">
+                <button type="button" class="read-btn btn-read">${book.status}</button>
+                <button type="button" class="remove-btn">Remove</button>
+            </div>`;
+    
+        gridContainer.appendChild(div);
+        })
+    }
+    else{
+        myLibrary.forEach(book => {
+            const div = document.createElement('div');
+            div.className = 'grid-card grid-item-list';
+            div.innerHTML =    `<div class="card-text-script card-text-list">
+                <div class="book-title-script book-title-list">${book.title}</div>
+                <div class="author-script author-list">By ${book.author}</div>
+                <div class="pages-number author-list">Pages: ${book.pages}</div>
+            </div>
+            <div class="card-buttons-script card-buttons-container card-buttons-list">
+                <button type="button" class="read-btn btn-read">${book.status}</button>
+                <button type="button" class="remove-btn">Remove</button>
+            </div>`;
+    
+        gridContainer.appendChild(div);
+        })
+    }
+    gridItem = document.querySelectorAll('.grid-card')
+    cardText = document.querySelectorAll('.card-text-script')
+    authorText = document.querySelectorAll('.author-script')
+    bookTitle = document.querySelectorAll('.book-title-script')
+    pagesNumber = document.querySelectorAll('.pages-number')
+    cardButtons = document.querySelectorAll('.card-buttons-script')
 }
 
 modalBtn.addEventListener('click', () => {
@@ -51,18 +141,6 @@ function closeModal(modal) {
     overlay.classList.remove('active')
 }
 
-readBtn.forEach(button => {
-    button.addEventListener('click', () => {
-        if (button.classList.contains('btn-read')) {
-            button.classList.remove('btn-read')
-            button.textContent = "Unread";
-        } else {
-            button.classList.add('btn-read')
-            button.textContent = "Read";
-        }
-    })
-})
-
 btnCardLayout.addEventListener('click', () => {
     if (!btnCardLayout.classList.contains('white-border')) {
         btnCardLayout.classList.add('white-border')
@@ -73,20 +151,26 @@ btnCardLayout.addEventListener('click', () => {
             card.classList.remove('grid-item-list')
             card.classList.add('grid-item')
         })
+        console.log(cardText    )
         cardText.forEach(card => {
             card.classList.remove('card-text-list')
+            card.classList.add('card-text')
         })
         authorText.forEach(author => {
             author.classList.remove('author-list')
+            author.classList.add('author')
         })
         bookTitle.forEach(title => {
             title.classList.remove('book-title-list')
+            title.classList.add('book-title')
         })
         pagesNumber.forEach(number => {
             number.classList.remove('author-list')
+            number.classList.add('author')
         })
         cardButtons.forEach(card => {
             card.classList.remove('card-buttons-list')
+            card.classList.add('card-buttons')
         })
     }
 })
