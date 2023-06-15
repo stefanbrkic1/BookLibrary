@@ -37,10 +37,10 @@ Mini book library to manage your own books. Click here [Link](https://stefanbrki
 <br>
 
 ## Features
-- Adding books to bookshelf
-- Removing books from bookshelf
-- Changing reading status for books 
-- Modern UI/UX design
+- **Adding** books to bookshelf
+- **Removing** books from bookshelf
+- Changing **reading status** for books 
+- Modern **UI/UX** design
 - **Responsive** for all devices **Desktop** , **Tablet** & **Mobile**
 
 <br>
