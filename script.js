@@ -7,6 +7,7 @@ const overlay = document.getElementById('overlay')
 const modal = document.getElementById('modal')
 const addBtn = document.getElementById('addBtn')
 const form = document.getElementById('form')
+const readingStatus = document.getElementsByName('readingStatus')
 
 window.onload = function(){
     displayBooks();
