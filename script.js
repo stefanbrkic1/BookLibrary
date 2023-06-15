@@ -114,7 +114,7 @@ function displayBooks() {
 
         const cardBookPagesDiv = document.createElement('div');
         cardBookPagesDiv.classList.add('pages-number-script', 'pages-number');
-        cardBookPagesDiv.textContent = book.pages; // Set book pages
+        cardBookPagesDiv.textContent = `Pages: ${book.pages}`; // Set book pages
 
         const cardButtonsDiv = document.createElement('div');
         cardButtonsDiv.classList.add('card-buttons-script', 'card-buttons');
