@@ -470,7 +470,7 @@ label {
     pointer-events: all;
 }
 
-.radio-input-container{
+.radio-input-container {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -479,7 +479,7 @@ label {
     border-radius: 5px;
 }
 
-.radio-label{
+.radio-label {
     font-size: 14rem;
     display: flex;
     align-items: center;

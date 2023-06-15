@@ -9,7 +9,7 @@ const addBtn = document.getElementById('addBtn')
 const form = document.getElementById('form')
 const readingStatus = document.getElementsByName('readingStatus')
 
-window.onload = function(){
+window.onload = function () {
     displayBooks();
 }
 
@@ -95,105 +95,105 @@ function Book(title, author, pages, status) {
     this.status = status;
 }
 
-function displayBooks(){
-    gridContainer.innerHTML=''
- myLibrary.forEach((book, index) => {
-    const cardDiv = document.createElement('div');
-    cardDiv.classList.add('grid-item-script', 'grid-item');
+function displayBooks() {
+    gridContainer.innerHTML = ''
+    myLibrary.forEach((book, index) => {
+        const cardDiv = document.createElement('div');
+        cardDiv.classList.add('grid-item-script', 'grid-item');
 
-    const cardTextDiv = document.createElement('div');
-    cardTextDiv.classList.add('card-text-script', 'card-text');
+        const cardTextDiv = document.createElement('div');
+        cardTextDiv.classList.add('card-text-script', 'card-text');
 
-    const cardBookTitleDiv = document.createElement('div');
-    cardBookTitleDiv.classList.add('book-title-script', 'book-title');
-    cardBookTitleDiv.textContent = book.title; // Set book title
+        const cardBookTitleDiv = document.createElement('div');
+        cardBookTitleDiv.classList.add('book-title-script', 'book-title');
+        cardBookTitleDiv.textContent = book.title; // Set book title
 
-    const cardBookAuthorDiv = document.createElement('div');
-    cardBookAuthorDiv.classList.add('author-script', 'author');
-    cardBookAuthorDiv.textContent = book.author; // Set book author
+        const cardBookAuthorDiv = document.createElement('div');
+        cardBookAuthorDiv.classList.add('author-script', 'author');
+        cardBookAuthorDiv.textContent = book.author; // Set book author
 
-    const cardBookPagesDiv = document.createElement('div');
-    cardBookPagesDiv.classList.add('pages-number-script', 'pages-number');
-    cardBookPagesDiv.textContent = book.pages; // Set book pages
+        const cardBookPagesDiv = document.createElement('div');
+        cardBookPagesDiv.classList.add('pages-number-script', 'pages-number');
+        cardBookPagesDiv.textContent = book.pages; // Set book pages
 
-    const cardButtonsDiv = document.createElement('div');
-    cardButtonsDiv.classList.add('card-buttons-script', 'card-buttons');
+        const cardButtonsDiv = document.createElement('div');
+        cardButtonsDiv.classList.add('card-buttons-script', 'card-buttons');
 
-    const cardStatusBtn = document.createElement('button');
-    cardStatusBtn.classList.add('btn-status');
-    cardStatusBtn.dataset.index = index;
-    if(book.status === 'Read'){
-        cardStatusBtn.textContent = 'Read'
-        cardStatusBtn.classList.add('btn-read')
-    }
-    else{
-        cardStatusBtn.textContent = 'Unread'
-    }
+        const cardStatusBtn = document.createElement('button');
+        cardStatusBtn.classList.add('btn-status');
+        cardStatusBtn.dataset.index = index;
+        if (book.status === 'Read') {
+            cardStatusBtn.textContent = 'Read'
+            cardStatusBtn.classList.add('btn-read')
+        }
+        else {
+            cardStatusBtn.textContent = 'Unread'
+        }
 
-    const cardRemoveBtn = document.createElement('button');
-    cardRemoveBtn.classList.add('remove-btn');
-    cardRemoveBtn.textContent = 'Remove'
-    cardRemoveBtn.dataset.index = index;
+        const cardRemoveBtn = document.createElement('button');
+        cardRemoveBtn.classList.add('remove-btn');
+        cardRemoveBtn.textContent = 'Remove'
+        cardRemoveBtn.dataset.index = index;
 
-    gridContainer.appendChild(cardDiv)
-    cardDiv.appendChild(cardTextDiv)
-    cardDiv.appendChild(cardButtonsDiv)
-    cardTextDiv.appendChild(cardBookTitleDiv)
-    cardTextDiv.appendChild(cardBookAuthorDiv)
-    cardTextDiv.appendChild(cardBookPagesDiv)
-    cardButtonsDiv.appendChild(cardStatusBtn)
-    cardButtonsDiv.appendChild(cardRemoveBtn)
+        gridContainer.appendChild(cardDiv)
+        cardDiv.appendChild(cardTextDiv)
+        cardDiv.appendChild(cardButtonsDiv)
+        cardTextDiv.appendChild(cardBookTitleDiv)
+        cardTextDiv.appendChild(cardBookAuthorDiv)
+        cardTextDiv.appendChild(cardBookPagesDiv)
+        cardButtonsDiv.appendChild(cardStatusBtn)
+        cardButtonsDiv.appendChild(cardRemoveBtn)
 
-    if(btnListLayout.classList.contains('white-border')){
-        cardDiv.classList.remove('grid-item');
-        cardDiv.classList.add('grid-item-list');
-        cardTextDiv.classList.remove('card-text');
-        cardTextDiv.classList.add('card-text-list');
-        cardBookTitleDiv.classList.remove('book-title');
-        cardBookTitleDiv.classList.add('book-title-list');
-        cardBookAuthorDiv.classList.remove('author');
-        cardBookAuthorDiv.classList.add('author-list');
-        cardBookPagesDiv.classList.remove('pages-number');
-        cardBookPagesDiv.classList.add('author-list');
-        cardButtonsDiv.classList.remove('card-buttons');
-        cardButtonsDiv.classList.add('card-buttons-list');
-    }
+        if (btnListLayout.classList.contains('white-border')) {
+            cardDiv.classList.remove('grid-item');
+            cardDiv.classList.add('grid-item-list');
+            cardTextDiv.classList.remove('card-text');
+            cardTextDiv.classList.add('card-text-list');
+            cardBookTitleDiv.classList.remove('book-title');
+            cardBookTitleDiv.classList.add('book-title-list');
+            cardBookAuthorDiv.classList.remove('author');
+            cardBookAuthorDiv.classList.add('author-list');
+            cardBookPagesDiv.classList.remove('pages-number');
+            cardBookPagesDiv.classList.add('author-list');
+            cardButtonsDiv.classList.remove('card-buttons');
+            cardButtonsDiv.classList.add('card-buttons-list');
+        }
 
-    statusButtons = document.querySelectorAll('.btn-status')
-    gridItem = document.querySelectorAll('.grid-item-script')
-    cardText = document.querySelectorAll('.card-text-script')
-    authorText = document.querySelectorAll('.author-script')
-    bookTitle = document.querySelectorAll('.book-title-script')
-    pagesNumber = document.querySelectorAll('.pages-number-script')
-    cardButtons = document.querySelectorAll('.card-buttons-script')
- })  
+        statusButtons = document.querySelectorAll('.btn-status')
+        gridItem = document.querySelectorAll('.grid-item-script')
+        cardText = document.querySelectorAll('.card-text-script')
+        authorText = document.querySelectorAll('.author-script')
+        bookTitle = document.querySelectorAll('.book-title-script')
+        pagesNumber = document.querySelectorAll('.pages-number-script')
+        cardButtons = document.querySelectorAll('.card-buttons-script')
+    })
 }
 
-gridContainer.addEventListener('click', function(event) {
+gridContainer.addEventListener('click', function (event) {
     const target = event.target;
-    
+
     // Check if the clicked element has the class 'btn-status'
     if (target.classList.contains('btn-status')) {
-      const index = target.dataset.index;
-      // Access the book object using the index and update the status
-      const book = myLibrary[index];
-      if (book.status === 'Read') {
-        book.status = 'Unread';
-      } else {
-        book.status = 'Read';
-      }
-      displayBooks(); // Update the display to reflect the status change
+        const index = target.dataset.index;
+        // Access the book object using the index and update the status
+        const book = myLibrary[index];
+        if (book.status === 'Read') {
+            book.status = 'Unread';
+        } else {
+            book.status = 'Read';
+        }
+        displayBooks(); // Update the display to reflect the status change
     }
-    
+
     // Check if the clicked element has the class 'remove-btn'
     if (target.classList.contains('remove-btn')) {
-      const index = target.dataset.index;
-      // Remove the book from the myLibrary array using the index
-      myLibrary.splice(index, 1);
-      displayBooks(); // Update the display after removing the book
+        const index = target.dataset.index;
+        // Remove the book from the myLibrary array using the index
+        myLibrary.splice(index, 1);
+        displayBooks(); // Update the display after removing the book
     }
-  });
-  
+});
+
 
 modalBtn.addEventListener('click', () => {
     openModal(modal)
