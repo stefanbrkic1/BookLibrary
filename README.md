@@ -1,5 +1,5 @@
 # BookLibrary
-Mini book library to manage your own books. Click here [Link](https://stefanbrkic1.github.io/BookLibrary/){:target="_blank"}
+Mini book library to manage your own books. Click here [Link](https://stefanbrkic1.github.io/BookLibrary/)
 
 <!-- ABOUT THE PROJECT -->
 ## Preview
