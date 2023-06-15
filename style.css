@@ -262,7 +262,7 @@ a:hover {
     background-color: var(--dark-danger-color);
 }
 
-.read-btn {
+.btn-status {
     flex: 1;
     padding: 10px;
     appearance: none;
